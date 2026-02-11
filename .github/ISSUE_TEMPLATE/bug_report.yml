@@ -1,0 +1,123 @@
+name: 🐛 Bug Report
+description: Report a bug or issue with Focus
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! 🙏
+        
+        Please fill out the information below to help us understand and fix the issue.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is.
+      placeholder: What happened? What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: How can we reproduce this issue?
+      placeholder: |
+        1. Open Focus
+        2. Click on '...'
+        3. See error
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating System
+      description: Which operating system are you using?
+      options:
+        - macOS
+        - Windows
+        - Linux
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: os-version
+    attributes:
+      label: OS Version
+      description: What version of the operating system are you running?
+      placeholder: e.g., macOS 14.2 (Sonoma), Windows 11, Ubuntu 22.04
+    validations:
+      required: true
+
+  - type: dropdown
+    id: hardware
+    attributes:
+      label: Hardware (Mac users)
+      description: If you're on a Mac, which chip are you using?
+      options:
+        - Not applicable (not a Mac)
+        - Intel
+        - Apple M1
+        - Apple M2
+        - Apple M3
+        - Apple M4
+        - Unknown
+    validations:
+      required: false
+
+  - type: input
+    id: focus-version
+    attributes:
+      label: Focus Version
+      description: What version of Focus are you using?
+      placeholder: e.g., 1.0.0 (check About or Settings)
+    validations:
+      required: false
+
+  - type: input
+    id: video-count
+    attributes:
+      label: Number of Videos in Library
+      description: Approximately how many videos do you have in your Focus library?
+      placeholder: e.g., 50, 500, 5000+
+    validations:
+      required: false
+
+  - type: dropdown
+    id: issue-category
+    attributes:
+      label: Issue Category
+      description: Which aspect of Focus is this bug related to?
+      options:
+        - Video Import/Management
+        - Search Functionality
+        - Transcription
+        - Performance/Speed
+        - Integration (Premiere, DaVinci, etc.)
+        - User Interface
+        - Other
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant Logs or Error Messages
+      description: If you have any error messages, crash logs, or console output, please paste them here.
+      placeholder: Paste logs here...
+      render: shell
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Add any other context about the problem here (screenshots, videos, etc.).
+      placeholder: Any other information that might help us understand the issue...
+    validations:
+      required: false
